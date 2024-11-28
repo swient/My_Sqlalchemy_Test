@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Logged in successfully!</h2>
+<p>Welcome, {{ username }}!</p>
+<p>Your user ID is: {{ user_id }}</p>
+<img src="{{ url_for('static', filename='uploads/' + profile_image) }}" alt="Profile Image">
+{% endblock %}

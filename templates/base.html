@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">首頁</a>
+        <span class="page-title">{{ page_title }}</span>
+        <div class="navbar-right">
+            {% if session.get('username') %}
+                <a href="{{ url_for('success') }}"><img src="{{ url_for('static', filename='uploads/' + session.get('username') + '.png') }}" alt="Profile Image" class="profile-image"></a>
+                <a href="{{ url_for('logout') }}">退出</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">登入</a>
+                <a href="{{ url_for('register') }}">註冊</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
