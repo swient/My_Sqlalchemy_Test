@@ -20,5 +20,5 @@ pipenv install
 ```
 
 ```
-pipenv run fastapi app.py
+pipenv run python app.py
 ```
