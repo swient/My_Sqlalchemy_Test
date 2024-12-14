@@ -15,5 +15,10 @@
 
 ## 如何使用
 
-- 未來可能會添加到My_Fastapi_Project
-- https://github.com/swient/My_Fastapi_Project.git
+```
+pipenv install
+```
+
+```
+pipenv run fastapi dev app/main.py
+```
